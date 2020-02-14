@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\User.Repository.MySql\User.Repository.MySql.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DotNetCore.CAP" Version="3.0.1" />
+        <PackageReference Include="DotNetCore.CAP.MySql" Version="3.0.1" />
+        <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="3.0.1" />
+        <PackageReference Include="EInfrastructure.Core.AutoFac" Version="2.0.0" />
+        <PackageReference Include="EInfrastructure.Core.AutoFac.MySql.AspNetCore" Version="2.0.0" />
+        <PackageReference Include="EInfrastructure.Core.AutomationConfiguration" Version="2.0.0" />
+        <PackageReference Include="EInfrastructure.Core.ServiceDiscovery.Consul.AspNetCore" Version="2.0.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.0" />
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.7.8" />
+        <PackageReference Include="Hangfire.Redis.StackExchange" Version="1.8.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.0" />
+    </ItemGroup>
+
+</Project>

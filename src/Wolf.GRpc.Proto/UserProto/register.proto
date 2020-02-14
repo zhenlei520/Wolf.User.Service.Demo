@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "User.Grpc.Service";
+
+package Wolf;
+
+//注册账户
+
+service Register {
+  rpc Register (RegisterUserRequest) returns (RegisterUserReply);
+  rpc RegisterStream (stream RegisterUserRequest) returns (stream RegisterUserReply);
+}
+
+// 注册账户
+message RegisterUserRequest {
+  string account = 1;
+  string password = 2;
+}
+message RegisterUserReply {
+  string account = 1;
+  string gender = 2;
+  string birthday = 3;
+}

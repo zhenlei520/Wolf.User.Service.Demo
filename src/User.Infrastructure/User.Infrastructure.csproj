@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="9.0.0" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="EInfrastructure.Core" Version="2.0.0" />
+        <PackageReference Include="EInfrastructure.Core.AspNetCore" Version="2.0.0" />
+        <PackageReference Include="EInfrastructure.Core.AutomationConfiguration" Version="2.0.0" />
+        <PackageReference Include="EInfrastructure.Core.Validation" Version="2.0.0" />
+        <PackageReference Include="EInfrastructure.Core.Redis" Version="2.0.0" />
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.1" />
+        <PackageReference Include="NLog.Extensions.Logging" Version="1.2.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Wolf.GRpc.Client\Wolf.GRpc.Client.csproj" />
+    </ItemGroup>
+</Project>

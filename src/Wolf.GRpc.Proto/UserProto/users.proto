@@ -1,0 +1,50 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "User.Grpc.Service";
+
+package Wolf;
+
+//注册账户
+
+service Users {
+  rpc UpdateNickName(UpdateNickNameRequest) returns (UpdateNickNameReply);
+  rpc GetAccount(GetUserRequest) returns(GetUserReply);
+  rpc Get(GetUserDetailRequest) returns(GetUserDetailReply);
+}
+
+// 得到账户信息
+message GetUserRequest{
+    string account=1;
+    string password=2;
+}
+
+message GetUserReply{
+    string id=1;
+    string name=2;
+    string account=3;
+    string avatar=4;
+    string registertime=5;
+}
+
+// 根据账户id得到账户信息
+message GetUserDetailRequest{
+    string id=1;
+}
+
+message GetUserDetailReply{
+    string name=1;
+    string account=2;
+    string avatar=3;
+    string gender=4;
+    string state=5;
+    string birthday=6;
+}
+
+// 修改昵称
+message UpdateNickNameRequest{
+    string id = 1;
+    string nickname = 2;
+}
+message UpdateNickNameReply{
+    string result=1;
+}
